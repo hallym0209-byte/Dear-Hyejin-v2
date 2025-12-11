@@ -5,8 +5,8 @@ import time
 
 # [페이지 설정]
 st.set_page_config(
-    page_title="To. Hyejin (Patch Note v2.0)",
-    page_icon="🍊",
+    page_title="Dear. Hyejin (Patch Note v2.0)",
+    page_icon="🧡",
     layout="centered"
 )
 
@@ -46,7 +46,7 @@ st.markdown("""
         margin-bottom: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
     }
     .timeline-item::before {
-        content: '🍊'; position: absolute; left: -14px; top: 15px; background: #FFFBF0;
+        content: '💛'; position: absolute; left: -14px; top: 15px; background: #FFFBF0;
     }
     
     /* 쿠폰 스타일 (종이 질감 효과) */
@@ -77,7 +77,7 @@ st.markdown("""
 # [헤더] 타이틀 & BGM
 # ==========================================
 st.markdown("<div style='text-align: center;'> <span class='highlight-badge'>New Release</span> </div>", unsafe_allow_html=True)
-st.title("🍊 Update Note: Hallym v2.0")
+st.title("🧡 Update Note: Hallym v2.0")
 st.markdown("### `Stable Release` | For Only One User: **Hyejin**")
 
 # [수정됨] st.audio 대신 st.video 사용 (유튜브 링크용)
@@ -92,9 +92,9 @@ st.markdown("---")
 # [인트로]
 # ==========================================
 st.markdown("""
-**Developer's Message:** 이 페이지는 **노랑**과 **주황**을 좋아하는 단 한 명의 유저, **[혜진]**님을 위해 디자인되었습니다.  
+**Developer's Message:** 이 페이지는 **노랑**과 **주황**을 좋아하는 단 한 명의 유저, **혜진**님을 위해 디자인되었습니다.  
 
-지난 버전(v1.0)은 잦은 '충돌(양보하지 않는 태도)'과 '오류(공감 부족, 모진 행동과 거친 말투, 진소리)'로 인해 유저에게 큰 불편을 드렸습니다.  
+지난 버전(v1.0)은 잦은 '충돌(양보하지 않는 태도)'과 '오류(공감 부족, 모진 행동과 거친 말투, 잔소리)'로 인해 유저에게 큰 불편을 드렸습니다.  
 40여일 간의 긴급 점검을 통해 차가웠던 시스템을 모두 걷어내고,  
 이제 혜진님의 색깔을 담아 더 따뜻해진 **Hallym v2.0** 업데이트 내용을 공개합니다.
 """)
@@ -113,12 +113,12 @@ def bug_card(emoji, title, desc, fix):
         with c2:
             st.markdown(f"**{title}**")
             st.caption(f"_{desc}_")
-            st.info(f"🍊 **Fixed:** {fix}")
+            st.info(f"🛠️ **Fixed:** {fix}")
         st.markdown("<br>", unsafe_allow_html=True)
 
-bug_card("❌", "Bug #401: 공감 프로세스 응답 없음", "해결책부터 제시하여 유저의 마음을 답답하게 함", "'해결' 로직을 조정하고, '무조건 경청' 모듈을 메인 프로세스로 탑재했습니다.")
-bug_card("❌", "Bug #503: 감정 제어 장치 오작동", "다툼 시 날카로운 언어로 상처를 입힘", "언어 순화 필터를 이중으로 적용했습니다. 감정이 격해지면 시스템이 잠시 '일시 정지(Pause)' 됩니다.")
-bug_card("❌", "Bug #404: 현재(Present) 인식 불가", "미래에 대한 불안으로 현재의 행복을 놓침", "'Future' 클래스 의존성을 대폭 낮추고, '지금 우리'의 우선순위를 최상위로 변경했습니다.")
+bug_card("🐛", "Bug #401: 공감 프로세스 응답 없음", "해결책부터 제시하여 유저의 마음을 답답하게 함", "'해결' 로직을 조정하고, '무조건 경청' 모듈을 메인 프로세스로 탑재했습니다.")
+bug_card("🐛", "Bug #503: 감정 제어 장치 오작동", "다툼 시 날카로운 언어로 상처를 입힘", "언어 순화 필터를 이중으로 적용했습니다. 감정이 격해지면 시스템이 잠시 '일시 정지(Pause)' 됩니다.")
+bug_card("🐛", "Bug #404: 현재(Present) 인식 불가", "미래에 대한 불안으로 현재의 행복을 놓침", "'Future' 클래스 의존성을 대폭 낮추고, '지금 우리'의 우선순위를 최상위로 변경했습니다.")
 
 # ==========================================
 # [섹션 2] Data Visualization (감정 분석)
@@ -148,172 +148,378 @@ st.caption("매일 혜진님을 생각하며 제 자신을 디버깅한 기록�
 with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Click)", expanded=False):
     st.markdown("""
     <div class='timeline-item'>
-        <b>Day 1 (11.29)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
+        <span class='commit-date'>2025.11.29 (Sat, Day1)</span>
+        <div class='commit-msg'>Error: 시스템 셧다운</div>
+        <div class='commit-desc'>모든 프로세스가 정지되었습니다. 혜진이가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.</div>
     </div>
-                    <div class='timeline-item'>
-        <b>Day 2 (11.30)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
+    """, unsafe_allow_html=True)
+   
+    # 11.30
+    st.markdown("""
+    <div class='timeline-item'>
+        <span class='commit-date'>2025.11.30 (Sun, Day2)</span>
+        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
+        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
     </div>
+    """, unsafe_allow_html=True)
+
+    # 12.01
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 3 (12.01)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
+        <span class='commit-date'>2025.12.01 (Mon, Day3)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 혜진이의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정에 돌입했다.</div>
     </div>
+    """, unsafe_allow_html=True)
+
+    # 12.02
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 4 (12.02)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                
-    <div class='timeline-item'>
-        <b>Day 5 (12.03)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
+        <span class='commit-date'>2025.12.02 (Tue, Day4)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 혜진이 에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
     </div>
+    """, unsafe_allow_html=True)
+
+    # 12.03
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 6 (12.04)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
+        <span class='commit-date'>2025.12.03 (Wed, Day5)</span>
+        <div class='commit-msg'>Update: 사용자 맞춤형 데이터 처리 기준 재설정</div>
+        <div class='commit-desc'>환자마다 정상 수치가 다르듯, 혜진이에게는 혜진이만의 기준이 있었는데. 내 기준을 강요했던 코드를 삭제했다.</div>
     </div>
+    """, unsafe_allow_html=True)
+
+    # 12.04
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 7(12.05)</b><br>
-        카톡 로그를 처음부터 다시 읽었다. "오빠 말 좀 예쁘게 해"라는 네 메시지에서 멈췄다. (Bug #503 확인)
+        <span class='commit-date'>2025.12.04 (Thu, Day6)</span>
+        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
+        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠지만, 다시 시작해 본다.</div>
     </div>
+    """, unsafe_allow_html=True)
+     
+    # 12.05
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 8 (12.06)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
+        <span class='commit-date'>2025.12.05 (Fri, Day7)</span>
+        <div class='commit-msg'>Analysis: '당신이 옳다' 독서 중 치명적 오류 원인 발견.</div>
+        <div class='commit-desc'>나는 헤진이를 사랑한 게 아니라, '내가 원하는 혜진이'를 사랑하려 했다. 혜진이의 SOS 신호를 무시했던 과거의 로그를 확인하고 뼈저리게 반성헸다.</div>
     </div>
+    """, unsafe_allow_html=True)
+
+    # 12.06
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 9 (12.07)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                
-    <div class='timeline-item'>
-        <b>Day 10 (12.08)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
+        <span class='commit-date'>2024.12.06 (Sat, Day8)</span>
+        <div class='commit-msg'>Rest: 시스템 강제 휴식 및 로그 분석, '도피'의 필요성 학습 완료.</div>
+        <div class='commit-desc'>나조차도 현실이 버거워 게임 속으로 도망치는데, 혜진이의 도피(술, 늦잠, 소비)를 그토록 매몰차게 꾸짖었음을 반성했다. 혜진이는 게을렀던 게 아니라, 살기 위해 숨을 쉬고 있었던 건데, 그걸 이제야 깨달았다. </div>
     </div>
+    """, unsafe_allow_html=True)
+
+    # 12.07
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 11 (12.09)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2024.12.07 (Sun, Day9)</span>
+        <div class='commit-msg'>Trust: '간섭' 모듈 제거 및 '신뢰' 프로세스 도입</div>
+        <div class='commit-desc'>학원 아이들에게 '미래를 위한 조언'을 하다가 시스템 오류(Error) 감지. "내가 괜한 참견을 한 건가? 믿고 놔두면 알아서 잘할 텐데." 혜진이에게 했던 잔소리들도 결국 나의 '불신'에서 비롯된 오지랖이었음을 깨달았다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.08
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 12 (12.10)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>            
+        <span class='commit-date'>2025.12.08 (Mon, Day10)</span>
+        <div class='commit-msg'>Hotfix: '속도(Speed)' 제한 및 '정확도(Accuracy)' 우선순위 상향</div>
+        <div class='commit-desc'>교수님께 코드 오류를 지적받았다. '빠른 것보다 정확한 게 중요하다'는 말씀에, 헤진이를 다그치기만 했던 내가 보였다. 내가 관대함을 받으니 더 잘하고 싶어지더라. 혜진이 에게도 그랬어야 했는데. 속도만 내다가 우리 관계의 수많은 오류를 놓쳐서 너무 미안하다. 결국 혜진이가 옳았다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.09
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 13 (12.11)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.09 (Tue, Day11)</span>
+        <div class='commit-msg'>Train: '이한림 모델' 가중치(Weight) 재설정 및 학습 시작</div>
+        <div class='commit-desc'>머신러닝을 공부하다 깨달았다. 모델의 성능은 '가중치'가 결정한다는 걸. 나는 그동안 '미래'에만 가중치를 두고, '헤진이'에게는 두지 않았기에 오류가 났던 거야. 매일 밤 혜진이를 생각하며 내 인생의 파라미터를 조정하고 있어. 헤진이를 130% 이해하는 모델이 될 때까지 계속할거야.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.10
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 14 (12.12)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                     
+        <span class='commit-date'>2025.12.10 (Wed, Day12)</span>
+        <div class='commit-msg'>Debug: '이한림 모델'의 판단 오류(Error) 수정 및 알고리즘 개선</div>
+        <div class='commit-desc'>폐암 데이터를 라벨링하다 깨달았다. 호전되는 환자를 악화된다고 오진하면, 독한 약 때문에 환자가 더 망가진다는 걸. 나도 혜진이의 노력을 무시하고 '나태함'으로 오진해서 '잔소리'라는 독한 약만 썼었지. 그게 헤진이를 얼마나 아프게 했을까? 이제는 오진하지 않는, 정확하고 따뜻한 진단을 내리는 사람이 될게. 내일 비 온다니까 우산 챙겨.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.11
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 15 (12.13)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.11 (Thu, Day13)</span>
+        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
+        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+     
+    # 12.12
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 16 (12.14)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.12 (Fri, Day14)</span>
+        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
+        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.13
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 17 (12.15)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                     
+        <span class='commit-date'>2025.12.13 (Sat, Day15)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.14
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 18 (12.16)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.14 (Sun, Day16)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.15
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 19 (12.17)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                     
+        <span class='commit-date'>2025.12.15 (Mon, Day17)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.16
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 20 (12.18)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.16 (Tue, Day18)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.17
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 21 (12.19)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.17 (Wed, Day19)</span>
+        <div class='commit-msg'>Update: 상대방 맞춤형 데이터 처리 기준 재설정</div>
+        <div class='commit-desc'>환자마다 정상 수치가 다르듯, 너에게는 너만의 기준이 있었는데. 내 기준을 강요했던 코드를 삭제했다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.18
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 22 (12.20)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.18 (Thu, Day20)</span>
+        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
+        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+     
+    # 12.19
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 23 (12.21)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.19 (Fri, Day21)</span>
+        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
+        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.20
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 24 (12.22)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                     
+        <span class='commit-date'>2025.12.20 (Sat, Day22)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.21
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 25 (12.23)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.21 (Sun, Day23)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.22
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 26 (12.24)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.22 (Mon, Day24)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.23
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 27 (12.25)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.23 (Tue, Day25)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.24
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 28 (12.26)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.24 (Wed, Day26)</span>
+        <div class='commit-msg'>Update: 상대방 맞춤형 데이터 처리 기준 재설정</div>
+        <div class='commit-desc'>환자마다 정상 수치가 다르듯, 너에게는 너만의 기준이 있었는데. 내 기준을 강요했던 코드를 삭제했다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.25
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 29 (12.27)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.25 (Thu, Day27)</span>
+        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
+        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+     
+    # 12.26
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 30 (12.28)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.26 (Fri, Day28)</span>
+        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
+        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.27
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 31 (12.29)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                     
+        <span class='commit-date'>2025.12.27 (Sat, Day29)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.28
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 32 (12.30)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>     
+        <span class='commit-date'>2025.12.28 (Sun, Day30)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # 12.29
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 33 (12.31)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2025.12.29 (Mon, Day31)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.30
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 34 (01.01)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2025.12.30 (Tue, Day32)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 12.31
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 35 (01.02)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2025.12.31 (Wed, Day33)</span>
+        <div class='commit-msg'>Update: 상대방 맞춤형 데이터 처리 기준 재설정</div>
+        <div class='commit-desc'>환자마다 정상 수치가 다르듯, 너에게는 너만의 기준이 있었는데. 내 기준을 강요했던 코드를 삭제했다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 01.01
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 36 (01.03)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2026.01.01 (Thu, Day34)</span>
+        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
+        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+     
+    # 01.02
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 37 (01.04)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2026.01.02 (Fri, Day35)</span>
+        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
+        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 01.03
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 38 (01.05)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>                   
+        <span class='commit-date'>2026.01.03 (Sat, Day36)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 01.04
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 39 (01.06)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2026.01.04 (Sun, Day37)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 01.05
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 40 (01.07)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2026.01.05 (Mon, Day38)</span>
+        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 01.06
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 41 (01.08)</b><br>
-        시스템 셧다운. 네가 없는 빈자리가 너무 커서 아무것도 할 수 없었다.
-    </div>   
+        <span class='commit-date'>2026.01.06 (Tue, Day39)</span>
+        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
+        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 01.07
+    st.markdown("""
     <div class='timeline-item'>
-        <b>Day 42 (01.09)</b><br>
-        <b>Hallym v2.0 배포 준비 완료.</b> 너에게 닿기를 기도하며.
+        <span class='commit-date'>2026.01.07 (Wed, Day40)</span>
+        <div class='commit-msg'>Update: 상대방 맞춤형 데이터 처리 기준 재설정</div>
+        <div class='commit-desc'>환자마다 정상 수치가 다르듯, 너에게는 너만의 기준이 있었는데. 내 기준을 강요했던 코드를 삭제했다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 01.08
+    st.markdown("""
+    <div class='timeline-item'>
+        <span class='commit-date'>2026.01.08 (Thu, Day41)</span>
+        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
+        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+    </div>
+    """, unsafe_allow_html=True)
+     
+    # 01.09
+    st.markdown("""
+    <div class='timeline-item'>
+        <span class='commit-date'>2026.01.09 (Fri, Day42)</span>
+        <div class='commit-msg'>Updated: Hallym v2.0 배포 준비 완료.</div>
+        <div class='commit-desc'>너에게 닿기를.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -353,14 +559,14 @@ st.markdown("---")
 st.markdown("### 📡 Server Status")
 
 if st.button("현재 서버 연결 상태 확인"):
-    with st.spinner("혜진님의 신호를 기다리는 중..."):
+    with st.spinner("[혜진공주]님의 신호를 기다리는 중..."):
         time.sleep(2.0) 
     
     st.markdown("""
     <div style='background-color: #FFF3E0; padding: 20px; border-radius: 10px; border-left: 5px solid #FF9800;'>
         <h3 style='color: #E65100; margin:0;'>🟢 Online & Waiting</h3>
         <p style='margin-top:10px; color: #5D4037;'>
-            <b>한림 v2.0 서버는 혜진님의 접속(연락)을 오매불망 기다리고 있습니다.</b><br>
+            <b>한림 v2.0 서버는 혜진공주님의 접속(연락)을 오매불망 기다리고 있습니다.</b><br>
             언제든 다시 노크해 주신다면, 가장 따뜻하고 안정적인 서비스를 약속드립니다.<br>
             <br>
             <b>보고 싶습니다.</b>
@@ -368,4 +574,38 @@ if st.button("현재 서버 연결 상태 확인"):
     </div>
     """, unsafe_allow_html=True)
 
-st.markdown("<br><br><div style='text-align: center; color: #FFB74D; font-size: 12px;'>Developed with ❤️ by Hallym</div>", unsafe_allow_html=True)
+st.markdown("---")
+st.markdown("<br>", unsafe_allow_html=True)
+
+# 여기에 네 전화번호를 넣어야 해! (하이픈 없이 숫자만, 예: 01012345678)
+MY_PHONE_NUMBER = "01041025845" 
+
+st.markdown("### 🚀 Final Step")
+st.caption("모든 업데이트 내역을 확인하셨다면, 아래 버튼을 눌러주세요.")
+
+if st.button("업데이트 승인 및 적용 (Merge Request)"):
+    with st.spinner("혜진님의 승인 신호를 기다리는 중..."):
+        time.sleep(2.5) # 긴장감 조성
+        
+    st.balloons() # 축하 효과
+    st.success("요청이 전송되었습니다! 이제 승인 전화를 걸어주세요.")
+    
+    # 전화 걸기 버튼 생성 (누르면 바로 전화앱 켜짐)
+    st.markdown(f"""
+    <a href="tel:{MY_PHONE_NUMBER}" style="text-decoration:none;">
+        <div style="
+            background: #4CAF50; 
+            color: white; 
+            padding: 15px; 
+            text-align: center; 
+            border-radius: 12px; 
+            font-weight: bold; 
+            font-size: 18px; 
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            📞 한림이에게 승인 전화 걸기
+        </div>
+    </a>
+    """, unsafe_allow_html=True)
+
+st.markdown("<br><br><br><div style='text-align: center; color: #FFB74D; font-size: 12px;'>Developed with ❤️ by Hallym</div>", unsafe_allow_html=True)
