@@ -1,11 +1,10 @@
-
 import streamlit as st
 import pandas as pd
 import time
 
 # [페이지 설정]
 st.set_page_config(
-    page_title="Dear. Hyejin (Patch Note v2.0)",
+    page_title="Dear. Hyejin (Patch Note v4.30)",
     page_icon="🧡",
     layout="centered"
 )
@@ -77,7 +76,7 @@ st.markdown("""
 # [헤더] 타이틀 & BGM
 # ==========================================
 st.markdown("<div style='text-align: center;'> <span class='highlight-badge'>New Release</span> </div>", unsafe_allow_html=True)
-st.title("🧡 Update Note: Hallym v2.0")
+st.title("🧡 Update Note: Hallym v4.30")
 st.markdown("### `Stable Release` | For Only One User: **Hyejin**")
 
 # [수정됨] st.audio 대신 st.video 사용 (유튜브 링크용)
@@ -86,39 +85,125 @@ with st.expander("🎵 BGM: 떨어져 있는 시간 동안 가장 많이 들은 
     st.video("https://youtu.be/FQQtxtAuKb4?si=ORAiXw12RGchxS7A") 
     st.caption("이 노래를 들으며 읽어주면 좋겠어.")
 
-st.markdown("---")
 
 # ==========================================
 # [인트로]
 # ==========================================
 st.markdown("""
-**Developer's Message:** 이 페이지는 **노랑**과 **주황**을 좋아하는 단 한 명의 유저, **혜진**님을 위해 디자인되었습니다.  
+**Developer's Message:** 이 페이지는 개발자 **hallym0209**님이 좋아하는 단 한 명의 유저, **혜진**님을 위해 제작되었습니다.  
 
-지난 버전(v1.0)은 잦은 '충돌(양보하지 않는 태도)'과 '오류(공감 부족, 모진 행동과 거친 말투, 잔소리)'로 인해 유저에게 큰 불편을 드렸습니다.  
-40여일 간의 긴급 점검을 통해 차가웠던 시스템을 모두 걷어내고,  
-이제 혜진님의 색깔을 담아 더 따뜻해진 **Hallym v2.0** 업데이트 내용을 공개합니다.
+지난 버전(v1.0)은 잦은 '충돌(양보하지 않는 태도)'과 '오류(공감 부족, 모진 행동과 거친 말투, 잔소리)'등으로 인해 유저에게 큰 불편을 드렸습니다.  
+이번 v4.30은 40여일 간의 긴급 점검 기간을 활용해, 다양한 학습 데이터들을 통해, 차가웠던 시스템을 모두 걷어내고, 
+이제 혜진님의 색깔을 담아 더 따뜻해진 **Hallym v4.30** 업데이트 내용을 공개합니다.
 """)
 st.markdown("---")
 
 # ==========================================
 # [섹션 1] Bug Report & Fixes
 # ==========================================
+def bug_card(emoji, title, desc, fix):
+    with st.container():
+        # 카드 디자인 적용을 위해 div로 감쌈
+        st.markdown(f"""
+        <div class="custom-card">
+            <div style="display: flex; align-items: start;">
+                <div style="font-size: 2.5rem; margin-right: 15px;">{emoji}</div>
+                <div>
+                    <div style="font-size: 1.1rem; font-weight: bold; color: #E65100;">{title}</div>
+                    <div style="font-size: 0.9rem; color: #8D6E63; margin-bottom: 8px;">_"{desc}"_</div>
+                    <div style="background-color: #E3F2FD; padding: 10px; border-radius: 10px; font-size: 0.9rem; color: #1565C0;">
+                        🛠️ <b>Fixed:</b> {fix}
+                    </div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
 st.subheader("🔧 Critical Fixes (버그 수정 내역)")
 st.caption("혜진님을 힘들게 했던 치명적인 오류들을 최우선으로 수정했습니다.")
 
-def bug_card(emoji, title, desc, fix):
-    with st.container():
-        c1, c2 = st.columns([1, 10]) # 컬럼 비율 조정
-        with c1: st.markdown(f"<h2>{emoji}</h2>", unsafe_allow_html=True)
-        with c2:
-            st.markdown(f"**{title}**")
-            st.caption(f"_{desc}_")
-            st.info(f"🛠️ **Fixed:** {fix}")
-        st.markdown("<br>", unsafe_allow_html=True)
+# ---------------------------------------------------------
+# 1. CRITICAL BUG FIXES (HTTP Error Codes 적용)
+# ---------------------------------------------------------
 
-bug_card("🐛", "Bug #401: 공감 프로세스 응답 없음", "해결책부터 제시하여 유저의 마음을 답답하게 함", "'해결' 로직을 조정하고, '무조건 경청' 모듈을 메인 프로세스로 탑재했습니다.")
-bug_card("🐛", "Bug #503: 감정 제어 장치 오작동", "다툼 시 날카로운 언어로 상처를 입힘", "언어 순화 필터를 이중으로 적용했습니다. 감정이 격해지면 시스템이 잠시 '일시 정지(Pause)' 됩니다.")
-bug_card("🐛", "Bug #404: 현재(Present) 인식 불가", "미래에 대한 불안으로 현재의 행복을 놓침", "'Future' 클래스 의존성을 대폭 낮추고, '지금 우리'의 우선순위를 최상위로 변경했습니다.")
+# Bug 400: Bad Request (틱틱거림)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+bug_card(
+        "🐛", 
+        "Error #400: Bad Response (Emotional Leakage)", 
+        "잘못된 입력값(외부 스트레스)으로 인해 서버가 '틱틱거림', '띠꺼움' 등의 잘못된 응답을 반환함", 
+        "✅ 'Stress_Isolation' 패치: 외부 스트레스와 관계없이 항상 '200 OK (다정함)' 상태를 유지하도록 로직 변경."
+)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Bug 404: Not Found (공감 부족) -> 가장 유명한 코드
+bug_card(
+        "🐛", 
+        "Error #404: Empathy Not Found (Logic Over Heart)", 
+        "사용자가 '위로'를 요청했으나 서버에 '공감 모듈'이 존재하지 않아 에러 발생", 
+        "✅ 'Listen_First' 모듈 설치: 해결책(Logic)보다 공감(Heart) 리소스를 최우선으로 검색하여 반환."
+)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Bug 402: Payment Required (돈 잔소리) -> 위트 포인트!
+bug_card(
+        "🐛", 
+        "Error #402: Payment Required (Financial Nagging)", 
+        "미래 불안정성을 이유로 사용자에게 과도한 '절약 요청' 메시지 전송", 
+        "✅ 'CFO_Mode' 전환: 대부분의 재정적 트래픽은 서버(한림)가 전담 처리. 기존의 '지출 경고(Warning)' 로직을 영구 삭제하고, 사용자의 자율성을 100% 보장함. 사용자는 'Free Tier(무제한 사랑)' 등급으로 승격되어 예산 걱정 없이 서비스 이용 가능. "
+)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Bug 403: Forbidden 접근 금지!
+bug_card(
+        "🐛", 
+        "Error #403: Forbidden Access (Sleep Mode Interference)", 
+        "사용자의 '수면 모드(방해 금지 모드)' 상태에서 서버가 강제 접근을 시도하여 보안 위배", 
+        "✅ 'Safe_Sleep' 프로토콜: 사용자님께서 수면모드 설정 중 접근 시도 시 'Access Denied' 처리 및 즉시 차단. (혜진님의 승인 토큰이 있어야만 접근 가능)"
+)
+
+st.markdown("---")
+
+# ---------------------------------------------------------
+# 2. PERFORMANCE ENHANCEMENTS (Success Codes 적용)
+# ---------------------------------------------------------
+st.subheader("⚡ Performance Enhancements")
+st.caption("시스템 성능을 최적화하고 새로운 기능을 배포했습니다.")
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Upgrade 200: OK (외형)
+bug_card(
+        "💪", 
+        "Status #430: Physical, Facial Update (Frontend Upgrade)", 
+        "기존 94kg의 과부하 상태", 
+        "✨ 87kg 경량화 및 비주얼 패치 완료: 날렵해진 턱선과 또렷해진 인상(눈썹 문신 적용). 향상된 체력과 민첩성으로 혜진님에게 최상의 시각적 만족감과 보호 기능 제공."
+    )
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Upgrade 201: Created (헌신/이벤트)
+bug_card(
+        "🎁", 
+        "Status #130: Feature Advanced (Romantic Logic)", 
+        "최초모델의 폭발적 애정 표현 모듈로 롤백(Rollback) 및 성능 확장.", 
+        "✨ 'Creative_Love' 엔진 가동: 헬로키티 일기장, 웹사이트 등 업그레이드된 혜진 맞춤형 감동 알고리즘 고도화."
+    )
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Upgrade 202: Accepted (책임감)
+bug_card(
+        "🛡️", 
+        "Status #109: Request Accepted (Respect & Support)", 
+        "책임감을 존중과 지지로 확장", 
+        "✨ 'Smart_Shield' 패치: 혜진님의 독립성(Autonomy)을 100% 존중. '통제자'가 아닌 든든한 '지원군'으로 포지션 변경. 단, 우리 관계를 흔드는 외부 소음(반대)은 시스템이 완벽 차단."
+    )
 
 # ==========================================
 # [섹션 2] Data Visualization (감정 분석)
@@ -257,8 +342,8 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.11 (Thu, Day13)</span>
-        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
-        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+        <div class='commit-msg'>Repentance: '사랑' 알고리즘의 핵심 로직 변경 (Selfish -> Agape)</div>
+        <div class='commit-desc'>아버지께서 보내주신 고린도전서 말씀을 통해 '오래 참음'과 '온유함'이 사랑의 본질임을 배웠다. 지난날 나의 사랑은 나르시시즘에 불과했음을 인정한다. 동료 선생님의 퇴사를 보며, 혜진이의 항의를 묵살했던 나 자신을 '가해자'로 인식하고 뼈저리게 반성함. 이제는 내가 혜진이를 위한 '따뜻한 세상'이 되기 위해, 이 고독을 견디며 나를 개조하겠다.</div>
     </div>
     """, unsafe_allow_html=True)
      
@@ -533,64 +618,68 @@ st.caption("업데이트를 완료한 유저에게만 드리는 한정판 아이
 # 쿠폰 디자인
 st.markdown("""
 <div class='coupon-card'>
-    <div class='coupon-title'>🎟️ 이한림 '입닥쳐' 쿠폰 (430회권)</div>
+    <div class='coupon-title'>🎟️ 이한림 '입닥쳐' 쿠폰 (430회)</div>
     <div class='coupon-text'>
         v2.0 업데이트 기념 보상 아이템입니다.<br>
-        시스템이 또 잔소리를 하거나 고집을 피우려 하면<br>
+        시스템(한림)이 또 잔소리를 하거나 고집을 피우려 하면<br>
         <b>이 화면을 보여주세요.</b><br>
-        <b>사용기한은 무기한 입니다.</b><br>    
         <br>
-        ⚠️ <b>Effect:</b> 시스템이 강제 종료되고, 무조건 혜진이 말만 듣습니다.
+        ⚠️ <b>Effect:</b> 시스템이 즉시 강제 종료되고, 무조건 혜진님의 말만 듣습니다.
+        <br>
+        <b>사용가능 기한은 무기한 입니다.</b>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-st.write("") # 여백
-
-# 쿠폰 발급 버튼
 if st.button("쿠폰 발급받기 (Click)"):
-    st.balloons() # 풍선 효과
-    st.success("✅ **[무조건 내 편 들어주기]** 쿠폰이 정상적으로 발급되었습니다! (캡처해서 보관하세요)")
+    st.balloons()
+    st.success("✅ **[무조건 내 편 들어주기]** 쿠폰이 발급되었습니다! (캡처해서 보관하세요)")
 
 # ==========================================
-# [푸터] 서버 상태
+# [푸터] 최종 배포 센터 (System Deployment)
 # ==========================================
 st.markdown("---")
-st.markdown("### 📡 Server Status")
+st.markdown("<br>", unsafe_allow_html=True)
 
-if st.button("현재 서버 연결 상태 확인"):
-    with st.spinner("[혜진공주]님의 신호를 기다리는 중..."):
+st.header("🚀 System Deployment Center")
+st.caption("한림 v2.0의 배포를 위한 최종 점검 단계입니다.")
+
+# Step 1: 서버 상태 확인 (감성)
+st.markdown("##### 1. 서버 상태 점검 (Connection Check)")
+
+if st.button("📡 현재 서버(한림) 연결 상태 확인 (Ping)"):
+    with st.spinner("혜진공주님의 신호를 스캔하는 중..."):
         time.sleep(2.0) 
     
     st.markdown("""
-    <div style='background-color: #FFF3E0; padding: 20px; border-radius: 10px; border-left: 5px solid #FF9800;'>
+    <div class='server-status-box'>
         <h3 style='color: #E65100; margin:0;'>🟢 Online & Waiting</h3>
         <p style='margin-top:10px; color: #5D4037;'>
             <b>한림 v2.0 서버는 혜진공주님의 접속(연락)을 오매불망 기다리고 있습니다.</b><br>
             언제든 다시 노크해 주신다면, 가장 따뜻하고 안정적인 서비스를 약속드립니다.<br>
             <br>
-            <b>보고 싶습니다.</b>
+            <b>너무너무너무 보고 싶습니다.</b>
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-st.markdown("---")
 st.markdown("<br>", unsafe_allow_html=True)
 
-# 여기에 네 전화번호를 넣어야 해! (하이픈 없이 숫자만, 예: 01012345678)
+# Step 2: 최종 승인 (행동 유도)
+st.markdown("##### 2. 업데이트 승인 (Final Merge)")
+st.caption("위의 모든 변경 사항(마음의 변화)을 확인하셨다면, 아래 버튼을 눌러주세요.")
+
+# 전화번호 설정 (하이픈 없이)
 MY_PHONE_NUMBER = "01041025845" 
 
-st.markdown("### 🚀 Final Step")
-st.caption("모든 업데이트 내역을 확인하셨다면, 아래 버튼을 눌러주세요.")
-
 if st.button("업데이트 승인 및 적용 (Merge Request)"):
-    with st.spinner("혜진님의 승인 신호를 기다리는 중..."):
+    with st.spinner("승인 요청 처리 중..."):
         time.sleep(2.5) # 긴장감 조성
         
     st.balloons() # 축하 효과
-    st.success("요청이 전송되었습니다! 이제 승인 전화를 걸어주세요.")
+    st.success("요청이 승인되었습니다! 이제 목소리를 들려주세요.")
     
-    # 전화 걸기 버튼 생성 (누르면 바로 전화앱 켜짐)
+    # 전화 걸기 버튼 생성
     st.markdown(f"""
     <a href="tel:{MY_PHONE_NUMBER}" style="text-decoration:none;">
         <div style="
