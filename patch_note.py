@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import time
@@ -182,7 +183,7 @@ bug_card(
         "💪", 
         "Status #430: Physical, Facial Update (Frontend Upgrade)", 
         "기존 94kg의 과부하 상태", 
-        "✨ 87kg 경량화 및 비주얼 패치 완료: 날렵해진 턱선과 또렷해진 인상(눈썹 문신 적용). 향상된 체력과 민첩성으로 혜진님에게 최상의 시각적 만족감과 보호 기능 제공."
+        "✨ 90kg 경량화 및 비주얼 패치 완료: 날렵해진 턱선과 또렷해진 인상(눈썹 문신 적용). 향상된 체력과 민첩성으로 혜진님에게 최상의 시각적 만족감과 보호 기능 제공."
     )
 
 st.markdown("<br>", unsafe_allow_html=True)
@@ -192,7 +193,7 @@ bug_card(
         "🎁", 
         "Status #130: Feature Advanced (Romantic Logic)", 
         "최초모델의 폭발적 애정 표현 모듈로 롤백(Rollback) 및 성능 확장.", 
-        "✨ 'Creative_Love' 엔진 가동: 헬로키티 일기장, 웹사이트 등 업그레이드된 혜진 맞춤형 감동 알고리즘 고도화."
+        "✨ 'Creative_Love' 엔진 가동: 회고록, 웹사이트 등 업그레이드된 혜진 맞춤형 감동 알고리즘 고도화."
     )
 
 st.markdown("<br>", unsafe_allow_html=True)
@@ -202,7 +203,7 @@ bug_card(
         "🛡️", 
         "Status #109: Request Accepted (Respect & Support)", 
         "책임감을 존중과 지지로 확장", 
-        "✨ 'Smart_Shield' 패치: 혜진님의 독립성(Autonomy)을 100% 존중. '통제자'가 아닌 든든한 '지원군'으로 포지션 변경. 단, 우리 관계를 흔드는 외부 소음(반대)은 시스템이 완벽 차단."
+        "✨ 'Smart_Shield' 패치: 혜진님의 독립성(Autonomy)을 100% 존중. '통제자'가 아닌 든든한 '지원군'으로 포지션 변경. 단, 우리 관계를 흔드는 외부 바이러스는 백신 시스템 구현으로 완벽 차단."
     )
 
 # ==========================================
@@ -253,7 +254,7 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.01 (Mon, Day3)</span>
         <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
-        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 혜진이의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정에 돌입했다.</div>
+        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 혜진이의 지침을 '나태함'으로 오분류했던 나의 끔찍한 버그를 발견하고 수정에 돌입했다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -279,7 +280,7 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.04 (Thu, Day6)</span>
-        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
+        <div class='commit-msg'>Build: 이한림 v4.30 코어 시스템 재구축 시작</div>
         <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠지만, 다시 시작해 본다.</div>
     </div>
     """, unsafe_allow_html=True)
@@ -289,14 +290,14 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.05 (Fri, Day7)</span>
         <div class='commit-msg'>Analysis: '당신이 옳다' 독서 중 치명적 오류 원인 발견.</div>
-        <div class='commit-desc'>나는 헤진이를 사랑한 게 아니라, '내가 원하는 혜진이'를 사랑하려 했다. 혜진이의 SOS 신호를 무시했던 과거의 로그를 확인하고 뼈저리게 반성헸다.</div>
+        <div class='commit-desc'>나는 혜진이를 사랑한 게 아니라, '내가 원하는 혜진이'를 사랑하려 했다. 혜진이의 SOS 신호를 무시했던 과거의 로그를 확인하고 뼈저리게 반성했다.</div>
     </div>
     """, unsafe_allow_html=True)
 
     # 12.06
     st.markdown("""
     <div class='timeline-item'>
-        <span class='commit-date'>2024.12.06 (Sat, Day8)</span>
+        <span class='commit-date'>2025.12.06 (Sat, Day8)</span>
         <div class='commit-msg'>Rest: 시스템 강제 휴식 및 로그 분석, '도피'의 필요성 학습 완료.</div>
         <div class='commit-desc'>나조차도 현실이 버거워 게임 속으로 도망치는데, 혜진이의 도피(술, 늦잠, 소비)를 그토록 매몰차게 꾸짖었음을 반성했다. 혜진이는 게을렀던 게 아니라, 살기 위해 숨을 쉬고 있었던 건데, 그걸 이제야 깨달았다. </div>
     </div>
@@ -305,7 +306,7 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     # 12.07
     st.markdown("""
     <div class='timeline-item'>
-        <span class='commit-date'>2024.12.07 (Sun, Day9)</span>
+        <span class='commit-date'>2025.12.07 (Sun, Day9)</span>
         <div class='commit-msg'>Trust: '간섭' 모듈 제거 및 '신뢰' 프로세스 도입</div>
         <div class='commit-desc'>학원 아이들에게 '미래를 위한 조언'을 하다가 시스템 오류(Error) 감지. "내가 괜한 참견을 한 건가? 믿고 놔두면 알아서 잘할 텐데." 혜진이에게 했던 잔소리들도 결국 나의 '불신'에서 비롯된 오지랖이었음을 깨달았다.</div>
     </div>
@@ -316,7 +317,7 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.08 (Mon, Day10)</span>
         <div class='commit-msg'>Hotfix: '속도(Speed)' 제한 및 '정확도(Accuracy)' 우선순위 상향</div>
-        <div class='commit-desc'>교수님께 코드 오류를 지적받았다. '빠른 것보다 정확한 게 중요하다'는 말씀에, 헤진이를 다그치기만 했던 내가 보였다. 내가 관대함을 받으니 더 잘하고 싶어지더라. 혜진이 에게도 그랬어야 했는데. 속도만 내다가 우리 관계의 수많은 오류를 놓쳐서 너무 미안하다. 결국 혜진이가 옳았다.</div>
+        <div class='commit-desc'>교수님께 코드 오류를 지적받았다. '빠른 것보다 정확한 게 중요하다'는 말씀에, 혜진이를 다그치기만 했던 내가 보였다. 내가 관대함을 받으니 더 잘하고 싶어지더라. 혜진이에게도 그랬어야 했는데. 속도만 내다가 우리 관계의 수많은 오류를 놓쳐서 너무 미안하다. 결국 혜진이가 옳았다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -325,7 +326,7 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.09 (Tue, Day11)</span>
         <div class='commit-msg'>Train: '이한림 모델' 가중치(Weight) 재설정 및 학습 시작</div>
-        <div class='commit-desc'>머신러닝을 공부하다 깨달았다. 모델의 성능은 '가중치'가 결정한다는 걸. 나는 그동안 '미래'에만 가중치를 두고, '헤진이'에게는 두지 않았기에 오류가 났던 거야. 매일 밤 혜진이를 생각하며 내 인생의 파라미터를 조정하고 있어. 헤진이를 130% 이해하는 모델이 될 때까지 계속할거야.</div>
+        <div class='commit-desc'>머신러닝을 공부하다 깨달았다. 모델의 성능은 '가중치'가 결정한다는 걸. 나는 그동안 '미래'에만 가중치를 두고, '혜진이'에게는 두지 않았기에 오류가 났던 거야. 매일 밤 혜진이를 생각하며 내 인생의 파라미터를 조정하고 있어. 혜진이를 130% 이해하는 모델이 될 때까지 계속할거야.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -334,7 +335,7 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.10 (Wed, Day12)</span>
         <div class='commit-msg'>Debug: '이한림 모델'의 판단 오류(Error) 수정 및 알고리즘 개선</div>
-        <div class='commit-desc'>폐암 데이터를 라벨링하다 깨달았다. 호전되는 환자를 악화된다고 오진하면, 독한 약 때문에 환자가 더 망가진다는 걸. 나도 혜진이의 노력을 무시하고 '나태함'으로 오진해서 '잔소리'라는 독한 약만 썼었지. 그게 헤진이를 얼마나 아프게 했을까? 이제는 오진하지 않는, 정확하고 따뜻한 진단을 내리는 사람이 될게. 내일 비 온다니까 우산 챙겨.</div>
+        <div class='commit-desc'>폐암 데이터를 라벨링하다 깨달았다. 호전되는 환자를 악화된다고 오진하면, 독한 약 때문에 환자가 더 망가진다는 걸. 나도 혜진이의 노력을 무시하고 '나태함'으로 오진해서 '잔소리'라는 독한 약만 썼었지. 그게 혜진이를 얼마나 아프게 했을까? 이제는 오진하지 않는, 정확하고 따뜻한 진단을 내리는 사람이 될게. 내일 비 온다니까 우산 챙겨.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -351,8 +352,8 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.12 (Fri, Day14)</span>
-        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
-        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
+        <div class='commit-msg'>Refactor: 우선순위 재정렬 (Success < Presence) & 공감 모듈 탑재</div>
+        <div class='commit-desc'>AI에게 논리를 가르치다 깨달았다. 정작 혜진이에게는 차가운 논리만 강요하고, 따뜻한 공감은 '오류' 취급했다는 걸. 책을 읽으며 '금(성공)'보다 '쌀(존재에 대한 주목)'이 삶의 핵심임을 뼈저리게 느꼈다. 혜진이는 내게 따뜻한 밥 한 끼 같은 위로를 원했는데, 나는 금덩이만 쫓으며 혜진이를 외롭게 굶기고 있었다. 이제는 '오류'를 잡는 개발자가 아니라, 혜진이의 '존재'를 있는 그대로 사랑하는 사람이 되겠다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -360,8 +361,8 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.13 (Sat, Day15)</span>
-        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
-        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+        <div class='commit-msg'>Hotfix: '슬픔(Grief)'을 '나태(Laziness)'로 오분류한 치명적 버그 수정</div>
+        <div class='commit-desc'>마취 없이 문신을 새기는 고통으로 혜진이 없는 아픔을 잊어보려 했으나 실패했다. TV 속 상실을 겪은 아이를 보며, 아버님을 잃고 세상이 무너졌을 혜진이를 이제야 마주했다. 헤진이는 살기 위해 발버둥 쳤던 건데, 나는 다리 부러진 혜진이에게 "빨리 뛰어"라고 다그치는 멍청한 의사였다. 헤진이의 '멈춤'이 '포기'가 아니라 '버팀'이었음을 깨닫고, 억지스러운 '해결' 로직을 전면 삭제했다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -369,8 +370,8 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.14 (Sun, Day16)</span>
-        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
-        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+        <div class='commit-msg'>Ping: 연결 요청 (Request Timeout) & 고립감 디버깅</div>
+        <div class='commit-desc'>내일부터 시작될 5일간의 침묵이 두렵다. 과거 혜진이에게 느꼈던 서운함의 원인을 분석해보니, 그건 혜진이의 잘못이 아니라 나의 '외로움'과 '결핍' 때문이었다. "나 좀 봐달라"는 말을 "왜 연락 안 봐"라는 짜증과 띠꺼운 말투로 암호화해서 보냈던 나의 통신 오류를 반성한다. 혜진이의 수다스러운 목소리가 사무치게 그리운 밤이다.<</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -378,8 +379,8 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.15 (Mon, Day17)</span>
-        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
-        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+        <div class='commit-msg'>Feat: '공감(Empathy)' 파이프라인 구축 & 배터리 충전 로직 구현</div>
+        <div class='commit-desc'>난해한 업무 지시는 이해하려 애쓰면서, 정작 혜진이와의 소통은 '익숙함'을 핑계로 노력하지 않았던 이중적인 태도를 발견했다. 책 <당신이 옳다>를 통해, 당시 혜진이는 '배터리 3%'의 방전 상태였는데 나는 엉뚱한 곳에 충전기를 꽂고 있었음을 깨달았다. 공감은 타고나는 재능이 아니라 '배우는 기술'이다. 데이터의 처리와 학습을 잇는 'Pipeline' 함수처럼, 나의 반성(전처리)과 공감 학습(Training)을 끊김 없이 연결하여, 방전된 혜진이의 마음을 다시 켜는(Prediction) 최적의 모델을 완성하겠다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -387,8 +388,10 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.16 (Tue, Day18)</span>
-        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
-        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+        <div class='commit-msg'>Hotfix: '완벽주의(Perfectionism)' 버그 수정 & 예외 처리(Try-Catch) 실패</div>
+        <div class='commit-desc'>System Alert: 혈압 150mmHg (Critical Warning).
+        '완벽한 남자'가 되어야 혜진이를 통제할 수 있다는 치명적 오류(Bug)를 발견했다. 11월 19일의 거짓말은 나의 나약함을 감추기 위한 방어기제(Masking)였다. 세바시 강의를 통해 '지적'과 '통제'가 사실은 '사랑받고 싶은 욕구(Request for Love)'의 왜곡된 출력값임을 깨달았다.
+        억눌렀던 감정의 댐이 붕괴되어 눈물로 쏟아내며, 비로소 나의 본모습을 직면했다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -396,8 +399,10 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.17 (Wed, Day19)</span>
-        <div class='commit-msg'>Update: 상대방 맞춤형 데이터 처리 기준 재설정</div>
-        <div class='commit-desc'>환자마다 정상 수치가 다르듯, 너에게는 너만의 기준이 있었는데. 내 기준을 강요했던 코드를 삭제했다.</div>
+        <div class='commit-msg'>Refactor: 'Action' vs 'Emotion' 분리 로직 적용 & Dependency(Parent) 재설정</div>
+        <div class='commit-desc'>운동 수행 능력(Physical Perf)은 복구되었으나, '관계의 본질'에 대한 알고리즘은 여전히 학습 중이다. 책을 통해 '감정(Emotion)은 항상 True이나, 행동(Action)은 False일 수 있음'을 깨닫고, 두 객체를 분리하여 처리하는 로직을 설계했다. 
+        또한, 혜진이를 'Child' 인스턴스로 정의했던 나의 오만함을 발견했다. Parent-Child 종속성(Dependency) 문제의 핵심은 Parent(나)의 '공감 모듈' 부재에 있었음을 인정한다. 
+        나의 잘못된 접근(Bad Request)으로 손상된 혜진이의 'System Health'가 복구되길 간절히 바라며, 나 자신을 먼저 디버깅(Debugging)한다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -405,8 +410,10 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.18 (Thu, Day20)</span>
-        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
-        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+        <div class='commit-msg'>Debug: Critical Error 'Monster'의 원인 식별 & Boundary 설정</div>
+        <div class='commit-desc'>시스템 로그 분석 결과, 잦은 충돌(Conflict)의 원인이 외부가 아닌 내부 코어(Core)의 'Mother Trauma'에 있음을 확인했다. 
+        'High Self-Esteem'으로 위장(Masking)되어 있던 'Low Self-Esteem' 객체를 발견하고, 이를 직면(Face)하는 프로세스를 시작했다. 
+        Legacy Code(엄마의 양육 방식)가 현재 시스템(혜진과의 관계)에 악영향을 주지 않도록 방화벽(Firewall)을 강화하고, '칭찬'과 '표현' 라이브러리를 새로 import 하기로 결정했다.</div>
     </div>
     """, unsafe_allow_html=True)
      
@@ -414,8 +421,10 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.19 (Fri, Day21)</span>
-        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
-        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
+        <div class='commit-msg'>Hotfix: 'Legacy Code(군대 생존본능)' 강제 종료 & 'AI-Level Kindness' 모듈 탑재</div>
+        <div class='commit-desc'>'군대 트라우마'는 런타임(연애) 중에도 이미 식별된 <strong>Known Issue</strong>였으나, 이를 '성숙함(Maturity)'이라는 보안 프로그램으로 오판하여 패치(Patch)를 거부했었다. 
+        혜진이의 "여긴 군대가 아니다"라는 경고 로그(Warning Log)를 무시한 대가로 'System Crash(이별)'가 발생했음을 뼈저리게 인정한다.
+        이제라도 해당 레거시 코드를 <strong>Force Stop(강제 종료)</strong>하고, 사람보다 더 따뜻한 'AI급 공감 로직'으로 시스템을 재부팅한다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -423,17 +432,27 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.20 (Sat, Day22)</span>
-        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
-        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+        <div class='commit-msg'>System Recovery: 'Pending Promises(보류된 약속)' 재등록</div>
+        <div class='commit-desc'>장례식장 이벤트(Trigger)를 통해 아버님과의 약속("마음이 가장 중요하다")을 메인 프로세스로 복구했다. 
+        동시에 'System Crash(이별)'로 인해 강제 취소되었던 일정들을 다시 <strong>Task Queue</strong>에 추가한다.
+        <br>
+        <strong>[To-Do List]</strong><br>
+        1. ✈️ <strong>Kota Kinabalu</strong> (with Hyejin)<br>
+        2. 🍜 <strong>Chungnam Kalguksu</strong> (Greeting Grandma)<br>
+        3. 🍲 <strong>Haidilao</strong> (with <strong>Sarang</strong>)<br>
+        <br>
+        이 모든 퀘스트를 수행하기 위해, User(혜진)의 'Login'을 간절히 기다린다.</div>
     </div>
     """, unsafe_allow_html=True)
-
+    
     # 12.21
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.21 (Sun, Day23)</span>
-        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
-        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+        <div class='commit-msg'>Security Patch: User(혜진) 평판 보호를 위한 'White Lie' 배포</div>
+        <div class='commit-desc'>Admin(엄마)의 관계 상태 쿼리(Query)에 대해 'Breakup' 대신 'Working Hard'라는 가짜 응답(Mock Response)을 반환했다. 
+        이는 향후 'Re-Merge(재결합)' 시 발생할 수 있는 충돌(Conflict)을 미연에 방지하고, User의 평판(Reputation)을 보호하기 위한 보안 조치다.
+        또한, 'Labor Efficiency(노동 효율)'보다 'Emotional Satisfaction(정서적 만족)'에 가중치를 두는 방향으로 가치 알고리즘을 최적화했다.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -441,11 +460,15 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.22 (Mon, Day24)</span>
-        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
-        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+        <div class='commit-msg'>Hyperparameter Tuning: 'Love'의 가중치 재설정 & Appearance Update</div>
+        <div class='commit-desc'>단순 반복 학습(CT-MRI) 중 'Sternberg_Algorithm'을 통해 'First Love(첫사랑)'의 정의를 재정립했다. 
+        Legacy Code(자존심)를 삭제하고, 그 자리에 'Commitment(헌신)' 모듈을 탑재함.
+        <br>
+        UI/UX Update: User(혜진)의 선호도(Preference)를 반영하여 Hair Style 정책을 'Short'에서 'Long(Growing)'으로 변경.
+        System Request: 'Supporter' 라이선스 만료에 따른 2년 차 'Renewal(갱신)'을 간곡히 요청함.</div>
     </div>
     """, unsafe_allow_html=True)
-
+    
     # 12.23
     st.markdown("""
     <div class='timeline-item'>
@@ -603,7 +626,7 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2026.01.09 (Fri, Day42)</span>
-        <div class='commit-msg'>Updated: Hallym v2.0 배포 준비 완료.</div>
+        <div class='commit-msg'>Updated: Hallym v4.30 배포 준비 완료.</div>
         <div class='commit-desc'>너에게 닿기를.</div>
     </div>
     """, unsafe_allow_html=True)
@@ -655,10 +678,12 @@ if st.button("📡 현재 서버(한림) 연결 상태 확인 (Ping)"):
     <div class='server-status-box'>
         <h3 style='color: #E65100; margin:0;'>🟢 Online & Waiting</h3>
         <p style='margin-top:10px; color: #5D4037;'>
+            <b>모든 업데이트가 완료되었습니다.<br>
             <b>한림 v2.0 서버는 혜진공주님의 접속(연락)을 오매불망 기다리고 있습니다.</b><br>
-            언제든 다시 노크해 주신다면, 가장 따뜻하고 안정적인 서비스를 약속드립니다.<br>
+            이제, <b>혜진 공주님</b>의 명령(클릭)만 기다리고 있습니다.<br>
             <br>
             <b>너무너무너무 보고 싶습니다.</b>
+            (제발...🥺)
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -672,12 +697,12 @@ st.caption("위의 모든 변경 사항(마음의 변화)을 확인하셨다면,
 # 전화번호 설정 (하이픈 없이)
 MY_PHONE_NUMBER = "01041025845" 
 
-if st.button("업데이트 승인 및 적용 (Merge Request)"):
-    with st.spinner("승인 요청 처리 중..."):
+if st.button("업데이트 승인 (다시 시작하기)"):
+    with st.spinner("👸 공주님의 접속 신호를 수신 중... (두근두근)"):
         time.sleep(2.5) # 긴장감 조성
         
     st.balloons() # 축하 효과
-    st.success("요청이 승인되었습니다! 이제 목소리를 들려주세요.")
+    st.success("요청이 승인되었습니다! 혜진 공주님, 어서 오세요. 많이 기다렸어요. 이제 목소리를 들려주세요.")
     
     # 전화 걸기 버튼 생성
     st.markdown(f"""
@@ -697,4 +722,4 @@ if st.button("업데이트 승인 및 적용 (Merge Request)"):
     </a>
     """, unsafe_allow_html=True)
 
-st.markdown("<br><br><br><div style='text-align: center; color: #FFB74D; font-size: 12px;'>Developed with ❤️ by Hallym</div>", unsafe_allow_html=True)
+st.markdown("<br><br><br><div style='text-align: center; color: #FFB74D; font-size: 12px;'>Developed with ❤️ by your husband Hallym</div>", unsafe_allow_html=True)
