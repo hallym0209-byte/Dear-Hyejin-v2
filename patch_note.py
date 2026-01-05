@@ -203,7 +203,7 @@ st.caption("시스템 성능을 최적화하고 새로운 기능을 배포했습
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Upgrade 200: OK (외형)
+# Upgrade 4300: OK (외형)
 bug_card(
         "💪", 
         "Status #430: Physical, Facial Update (Frontend Upgrade)", 
@@ -219,7 +219,7 @@ st.markdown("""
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Upgrade 201: Created (헌신/이벤트)
+# Upgrade 130: Created (헌신/이벤트)
 bug_card(
         "🎁", 
         "Status #130: Feature Advanced (Romantic Logic)", 
@@ -235,7 +235,7 @@ st.markdown("""
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Upgrade 202: Accepted (책임감)
+# Upgrade 815: Accepted (책임감)
 bug_card(
         "🛡️", 
         "Status #815: Request Accepted (Respect & Support)", 
@@ -273,7 +273,7 @@ st.caption("📉 회색(자존심)은 바닥을 쳤고, 📈 주황색(그리움
 # ==========================================
 st.markdown("---")
 st.subheader("📝 Commit History (주요 기록)")
-st.caption("매일 혜진님을 생각하며 제 자신을 디버깅한 기록들입니다.")
+st.caption("매일 혜진님을 생각하며 후회와 반성으로 제 자신을 디버깅한 기록들입니다.")
 
 with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Click)", expanded=False):
     st.markdown("""
@@ -612,17 +612,48 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2025.12.31 (Wed, Day33)</span>
-        <div class='commit-msg'>Update: 상대방 맞춤형 데이터 처리 기준 재설정</div>
-        <div class='commit-desc'>환자마다 정상 수치가 다르듯, 너에게는 너만의 기준이 있었는데. 내 기준을 강요했던 코드를 삭제했다.</div>
+        <div class='commit-msg'>Release: 2025 System Log Review & 'Hallym v4.30' 배포</div>
+        <div class='commit-desc'>
+        지난 1년간의 방대한 데이터 로그(Log)를 월별로 분석하여 시스템 충돌(Crash)의 원인을 규명하고, 2026년 재가동을 위한 리포트를 발행했다.
+        <br><br>
+        <strong>[2025 System Log]</strong><br>
+        Jan: <strong>Init Project</strong> - 예상치 못한 인연, 6년 만의 설렘으로 프로젝트 생성.<br>
+        Feb: <strong>Deploy</strong> - 연애 시작. 대천 여행. 모든 것이 꿈같았던 초기 구동.<br>
+        Mar: <strong>Feature Add</strong> - 트레이너 도전 & 혜진의 석사 시작. 서로의 일상에 스며듦.<br>
+        Apr: <strong>Warning</strong> - 벚꽃과 첫 다툼. 불안정한 데이터(술/주변인) 감지.<br>
+        May: <strong>Performance Peak</strong> - 바디프로필 & 100일. 싸움과 화해의 반복 속 깊어진 애정.<br>
+        Jun: <strong>Integration Test</strong> - 동거 & 통영 여행. '가족'이 되어도 좋겠다는 확신.<br>
+        Jul: <strong>Critical Event</strong> - 아버님 장례. 너의 슬픔을 함께 짊어지며 '마지막 여자'임을 선언.<br>
+        Aug: <strong>Conflict</strong> - 대천 휴가 & 200일. 생활 습관 차이로 인한 버그 발생 및 해결 시도.<br>
+        Sep: <strong>Migration</strong> - 서울 취업 & AI 분야 진입. 장거리(Long-distance) 환경 설정.<br>
+        Oct: <strong>Comm Breakdown</strong> - "안 좋은 말 들을까 봐 입 닫게 돼." 통신 오류 심화.<br>
+        Nov: <strong>System Crash</strong> - 잦은 다툼과 초냉전. 결국 연결 종료(Disconnected).<br>
+        Dec: <strong>Deep Debugging</strong> - 처절한 자기 성찰. '나만 맞다'는 치명적 오류 수정.<br>
+        <br>
+        <strong>[Conclusion]</strong><br>
+        2025년의 실패는 혜진이의 오류가 아니라 나의 '오만한 알고리즘' 때문이었다. 모든 버그를 수정한 <strong>[이한림 v4.30]</strong>을 2026년에 재배포하니, 사용자(혜진공주)의 재접속을 간절히 가다립니다.(Listening).
+        </div>
     </div>
     """, unsafe_allow_html=True)
-
+    
     # 01.01
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2026.01.01 (Thu, Day34)</span>
-        <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
-        <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+        <div class='commit-msg'>Init: 2026 Roadmap 수립 & '오타니(Luck)' 알고리즘 탑재</div>
+        <div class='commit-desc'>
+        KTX 차양막 고장이라는 외부 예외(External Exception) 상황에서, 기존의 '짜증' 대신 '친절(Graceful Handling)'로 대응하며 성격 모듈의 업그레이드를 확인했다. 불편함을 감내하는 혜진이(User)를 대신해 민원 업무를 보다 친절히 수행하는 업데이트로 '완벽한 상호 보완' 구조를 설계했다.
+        <br><br>
+        <strong>[2026 Roadmap]</strong><br>
+        1. <strong>Priority 0 (Re-connect):</strong> '진인사대천명' 로직. 오타니처럼 '행운(Luck)'을 수집하여 너와의 재회 확률을 극대화한다.<br>
+        2. <strong>Career:</strong> 연세대 의료AI 석사 입학 & 딥러닝 마스터.<br>
+        3. <strong>Health:</strong> 주 4회 고효율 운동으로 3대 570kg 달성.<br>
+        4. <strong>Dev:</strong> 테크 블로그 주 1회 연재.<br>
+        5. <strong>Edu:</strong> 책임감 있는 수업 준비.<br>
+        <br>
+        <em>"👸🏼As long as Rapunzel's hair.👸🏼"</em><br>
+        라푼젤의 긴 머리카락만큼, 혜진이에게 닿을 새해 복과 내 사랑이 끊이지 않기를.
+        </div>
     </div>
     """, unsafe_allow_html=True)
      
@@ -630,8 +661,12 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2026.01.02 (Fri, Day35)</span>
-        <div class='commit-msg'>Fix: '해결' 대신 '경청' 모듈 적용 & 시계줄 연결 복구</div>
-        <div class='commit-desc'>학생의 고민을 해결해주려 하지 않고 들어만 주었더니 표정이 밝아졌다. 혜진이가 준 시계줄을 고쳤다. 팡팡 내려쳐야 들어가는 투박한 수리였지만, 결국 제자리를 찾았다.</div>
+        <div class='commit-msg'>Patch: 가치관 리팩토링 & '전용 맥가이버' 모듈 점검</div>
+        <div class='commit-desc'>
+        치과와 G70 이벤트를 통해 '절약'이 아닌 '가치(Value)' 중심으로 알고리즘을 최적화했다. 관계의 '유지보수(Maintenance)' 중요성을 재확인하고, <code>Spending for Love</code> 공식을 확립함.
+        <br><br>
+        특히 현관 센서등 교체로 <strong>'혜진 전용 맥가이버(Exclusive MacGyver)'</strong> 기능이 정상 작동함을 검증 완료. 언제든 호출 시 즉각 출동 대기(Ready to Serve).
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -639,8 +674,17 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2026.01.03 (Sat, Day36)</span>
-        <div class='commit-msg'>Docs: '당신이 옳다' 독서 시작 & 공감 알고리즘 학습</div>
-        <div class='commit-desc'>책을 읽으며 내 오류를 확인했다. 너의 지침을 '나태함'으로 오판했던 나의 끔찍한 버그를 발견하고 수정 중.</div>
+        <div class='commit-msg'>Debug: 애착 유형(Attachment Style) 오진단 수정 및 원인 규명</div>
+        <div class='commit-desc'>
+        참고 문헌(Reference) 학습을 통해 시스템의 핵심 오류가 <strong>'불안형(Anxious)'</strong> 알고리즘에서 기인했음을 발견했다.
+        <br><br>
+        <strong>[Analysis Result]</strong><br>
+        - <strong>User(Hyejin):</strong> <code>Secure Type (안정형)</code> - 높은 내구성과 포용력을 가진 이상적 모델.<br>
+        - <strong>System(Me):</strong> <code>Anxious Type (불안형)</code> - 잦은 상태 확인(Polling)과 에러 예측으로 리소스를 낭비하고 상대를 과부하(Overload) 걸리게 함.<br>
+        - <strong>Root Cause:</strong> 시스템의 불안정성이 사용자를 강제 회피(Forced Avoidance) 모드로 전환시켰다.<br>
+        <br>
+        이러한 '불안형' 버그를 패치하고, 아스날의 22년 존버 정신(Persistence)을 벤치마킹하여 '안정형' 서버로의 전환을 다짐했다.
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -648,8 +692,15 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
         <span class='commit-date'>2026.01.04 (Sun, Day37)</span>
-        <div class='commit-msg'>Refactor: 불필요한 '엄격함' 제거, '유연성' 추가</div>
-        <div class='commit-desc'>일할 땐 요령도 피우면서, 너에게는 왜 정답만 강요했을까. 관계에는 정답이 없다는 걸 코드를 짜며 배웠다.</div>
+        <div class='commit-msg'>Feature: 'Teacher' 모드 활성화 & 미래 투자(Investment) 계획 수립</div>
+        <div class='commit-desc'>
+        단순 지식 전달자(Instructor)가 아닌 인격적 멘토(Teacher)로서의 정체성을 확립하며, 혜진이(User)의 따뜻한 시각을 시스템에 통합(Merge)하려고 시도했다.
+        <br><br>
+        <strong>[Resource Allocation]</strong><br>
+        주말 풀타임 가동(Full-time Operation)으로 인한 리소스 과부하가 예상되나, 이를 통해 창출될 수익(Revenue)의 최우선 사용처를 <strong>'💍혜진과의 커플링(Symbol of Restart💍'</strong>으로 지정함으로써 동기 부여(Motivation) 효율을 극대화하려 한다.
+        <br><br>
+        주변 노드(Friend)의 부정적 피드백("사람은 안 변한다")을 'Noise'로 필터링하고, 자체적인 딥러닝(Deep Learning)을 통해 완전히 새로워진 모델(v4.30)로 새로운 관계의 가능성을 확신한다.
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -710,7 +761,7 @@ st.markdown("""
 <div class='coupon-card'>
     <div class='coupon-title'>🎟️ 이한림 '입닥쳐' 쿠폰 (430회)</div>
     <div class='coupon-text'>
-        v2.0 업데이트 기념 보상 아이템입니다.<br>
+        v4.30 업데이트 기념 보상 아이템입니다.<br>
         시스템(한림)이 또 잔소리를 하거나 고집을 피우려 하면<br>
         <b>이 화면을 보여주세요.</b><br>
         <br>
@@ -732,7 +783,7 @@ st.markdown("---")
 st.markdown("<br>", unsafe_allow_html=True)
 
 st.header("🚀 System Deployment Center")
-st.caption("한림 v2.0의 배포를 위한 최종 점검 단계입니다.")
+st.caption("한림 v4.30의 배포를 위한 최종 점검 단계입니다.")
 
 # Step 1: 서버 상태 확인 (감성)
 st.markdown("##### 1. 서버 상태 점검 (Connection Check)")
@@ -746,7 +797,7 @@ if st.button("📡 현재 서버(한림) 연결 상태 확인 (Ping)"):
         <h3 style='color: #E65100; margin:0;'>🟢 Online & Waiting</h3>
         <p style='margin-top:10px; color: #5D4037;'>
             <b>모든 업데이트가 완료되었습니다.<br>
-            <b>한림 v2.0 서버는 혜진공주님의 접속(연락)을 오매불망 기다리고 있습니다.</b><br>
+            <b>한림 v4.30 서버는 혜진공주님의 접속(연락)을 오매불망 기다리고 있습니다.</b><br>
             이제, <b>혜진 공주님</b>의 명령(클릭)만 기다리고 있습니다.<br>
             <br>
             <b>너무너무너무 보고 싶습니다.</b>
@@ -789,4 +840,4 @@ if st.button("업데이트 승인 (다시 시작하기)"):
     </a>
     """, unsafe_allow_html=True)
 
-st.markdown("<br><br><br><div style='text-align: center; color: #FFB74D; font-size: 12px;'>Developed with ❤️ by your husband Hallym</div>", unsafe_allow_html=True)
+st.markdown("<br><br><br><div style='text-align: center; color: #FFB74D; font-size: 12px;'>Developed with ❤️ by Hallym only for Hyejin </div>", unsafe_allow_html=True)
