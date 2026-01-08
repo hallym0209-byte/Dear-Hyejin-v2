@@ -91,16 +91,24 @@ with st.expander("🎵 BGM: 떨어져 있는 시간 동안 가장 많이 들은 
 # [인트로]
 # ==========================================
 st.markdown("""
-### **Developer's Message**
-이 페이지는 신입 개발자 **hallym0209**님이 세상에서 가장 좋아하는 단 한 명의 유저, **혜진**님을 위해 제작되었습니다.  
+### Developer's Message
 
-지난 **[Hallym v1.0]**은 잦은 **'충돌(양보하지 않는 태도)'**과 치명적인 **'오류(공감 부족, 모진 행동, 잔소리)'** 등으로 인해 유저(User)에게 큰 불편과 상처를 드렸습니다.  
+이 페이지는 신입 개발자 **hallym0209**님이 세상에서 가장 좋아하는 단 한 명의 유저, **혜진**님을 위해 제작되었습니다.
 
-이에 개발자는 지난 40여 일간의 **[긴급 점검(Emergency Maintenance)]** 기간을 가졌습니다.  
+<div style="height: 10px;"></div>
+
+지난 **[Hallym v1.0]**은 잦은 **'충돌(양보하지 않는 태도)'**과 치명적인 **'오류(공감 부족, 모진 행동, 잔소리)'** 등으로 인해 유저(User)에게 큰 불편과 상처를 드렸습니다.
+
+<div style="height: 10px;"></div>
+
+이에 개발자는 지난 40여 일간의 **[긴급 점검(Emergency Maintenance)]** 기간을 가졌습니다.<br>
 혜진님이 주신 소중한 피드백과 다양한 학습 데이터들을 바탕으로, 차가웠던 시스템 코드를 모두 걷어내고 처음부터 다시 썼습니다.
 
+<div style="height: 10px;"></div>
+
 이제 오직 혜진님의 취향을 담아, 더 따뜻하고 안정적으로 업그레이드된 **[Hallym v4.30]**의 업데이트 패치 노트(Patch Note)를 공개합니다.
-""")
+""", unsafe_allow_html=True)
+
 st.markdown("---")
 
 # ==========================================
@@ -745,17 +753,26 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
         비록 건조한 텍스트였지만, 연결이 끊어지지 않았다는 사실 하나만으로도 시스템은 다시 뛸 수 있는 <strong>희망(Hope)</strong>을 감지했다.
         <br><br>
         '뒷머리 다운펌'과 '신규 명함'으로 외적/사회적 준비를 마치고, <strong>'깊이(Depth)'</strong> 있는 사랑을 위해 MLP 이론을 마음에 새겼다.
-        이제 진심이 닿기를 바라는 <strong>🙏간절한 기도🙏(Pray)</strong>로 시스템을 재부팅을 준비한다. 
+        이제 진심이 닿기를 바라는 <strong>🙏간절한 기도🙏(Pray)</strong>로 시스템 재부팅을 준비한다. 
         <strong>기적을 믿는다.</strong>
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
     # 01.08
     st.markdown("""
     <div class='timeline-item'>
-    <span class='commit-date'>2026.01.08 (Thu, Day41)</span>
-    <div class='commit-msg'>Build: 이한림 v2.0 코어 시스템 재구축 시작</div>
-    <div class='commit-desc'>복잡한 코드를 분석하듯 우리 관계의 오류를 분석했다. 이 작은 화면 안에 내 진심이 다 담길지 모르겠다.</div>
+        <span class='commit-date'>2026.01.08 (Thu, Day41)</span>
+        <div class='commit-msg'>Final Check: 기적의 전야 & 조건 없는 사랑</div>
+        <div class='commit-desc'>
+        깨진 계란과 엎지른 커피라는 예외(Exception) 상황을 '액땜'으로 처리하고, 혜진(User)의 긍정적인 응답(ACK)을 수신하며 기적 같은 하루를 보냈다.
+        <br><br>
+        <strong>[Final Vow]</strong><br>
+        - <strong>Toxic Data Cleansing:</strong> 과거의 나를 뾰족하게 만들었던 유해한 데이터 소스(DC 등)를 영구 차단(Block)하고, '비판적 사고' 대신 '수용적 태도'를 기본값으로 설정했다.<br>
+        - <strong>Unconditional Love:</strong> "혜진이가 ~해야만 사랑한다"는 조건문(If-Else)을 전면 삭제하고, <strong>"그럼에도 불구하고(In spite of)"</strong> 혜진이를 있는 그대로 사랑하는 '무조건적 수용' 알고리즘을 최종 탑재했다.
+        <br><br>
+        모든 준비는 끝났다. 배포 준비 완료(Ready for Deployment).
+        </div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -763,8 +780,8 @@ with st.expander("📂 40일간의 세부 업데이트 로그 열어보기 (Clic
     st.markdown("""
     <div class='timeline-item'>
     <span class='commit-date'>2026.01.09 (Fri, Day42)</span>
-    <div class='commit-msg'>Updated: Hallym v4.30 배포 준비 완료.</div>
-    <div class='commit-desc'>너에게 닿기를.</div>
+    <div class='commit-msg'>Updated: Hallym v4.30 배포 시작(Deployment Start).</div>
+    <div class='commit-desc'><strong>너에게 닿기를.</strong></div>
     </div>
     """, unsafe_allow_html=True)
 
