@@ -93,20 +93,20 @@ with st.expander("🎵 BGM: 떨어져 있는 시간 동안 가장 많이 들은 
 st.markdown("""
 ### Developer's Message
 
-이 페이지는 신입 개발자 **hallym0209**님이 세상에서 가장 좋아하는 단 한 명의 유저, **혜진**님을 위해 제작되었습니다.
+이 페이지는 신입 개발자 <strong>hallym0209</strong>님이 세상에서 가장 좋아하는 단 한 명의 유저, <strong>혜진</strong>님을 위해 제작되었습니다.
 
 <div style="height: 10px;"></div>
 
-지난 **[Hallym v1.0]**은 잦은 **'충돌(양보하지 않는 태도)'**과 치명적인 **'오류(공감 부족, 모진 행동, 잔소리)'** 등으로 인해 유저(User)에게 큰 불편과 상처를 드렸습니다.
+지난 <strong>[Hallym v1.0]</strong>은 잦은 <strong>'충돌(양보하지 않는 태도)'</strong>과 치명적인 <strong>'오류(공감 부족, 모진 행동, 잔소리)'</strong> 등으로 인해 유저(User)에게 큰 불편과 상처를 드렸습니다.
 
 <div style="height: 10px;"></div>
 
-이에 개발자는 지난 40여 일간의 **[긴급 점검(Emergency Maintenance)]** 기간을 가졌습니다.<br>
+이에 개발자는 지난 40여 일간의 <strong>[긴급 점검(Emergency Maintenance)]</strong> 기간을 가졌습니다.<br>
 혜진님이 주신 소중한 피드백과 다양한 학습 데이터들을 바탕으로, 차가웠던 시스템 코드를 모두 걷어내고 처음부터 다시 썼습니다.
 
 <div style="height: 10px;"></div>
 
-이제 오직 혜진님의 취향을 담아, 더 따뜻하고 안정적으로 업그레이드된 **[Hallym v4.30]**의 업데이트 패치 노트(Patch Note)를 공개합니다.
+이제 오직 혜진님의 취향을 담아, 더 따뜻하고 안정적으로 업그레이드된 <strong>[Hallym v4.30]</strong>의 업데이트 패치 노트(Patch Note)를 공개합니다.
 """, unsafe_allow_html=True)
 
 st.markdown("---")
