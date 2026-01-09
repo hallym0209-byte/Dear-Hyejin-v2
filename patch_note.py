@@ -832,9 +832,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 if st.button("🎟️ 쿠폰 발급받기 (Click)"):
+    # 1. 효과음/풍선
     st.balloons()
     st.toast("✅ 쿠폰이 발급되었습니다! 캡처해서 보관하세요!", icon="🎁")
-    st.success("축하합니다! **[이한림 '입 닥쳐' 쿠폰 430매]**가 인벤토리에 지급되었습니다.")
+    
+    # 2. 디자인된 성공 메시지 (st.success 대체)
+    st.markdown("""
+    <div style="background-color: #E8F5E9; padding: 15px; border-radius: 10px; border: 1px solid #C8E6C9; color: #5D4037;">
+        🎉 축하합니다! <strong>[이한림 '입 닥쳐' 쿠폰 430매]</strong>가 인벤토리에 지급되었습니다.
+    </div>
+    """, unsafe_allow_html=True)
 
 # ==========================================
 # [푸터] 최종 배포 센터 (System Deployment)
