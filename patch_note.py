@@ -28,7 +28,7 @@ track_visitor()
 # --- [1] 텔레그램 설정 (아까 복사한 거 여기 붙여넣기) ---
 # 주의: 실제 배포할 때는 이 키들을 Streamlit Cloud의 'Secrets'에 넣는 게 보안상 좋지만, 
 # 일단은 작동 확인을 위해 여기 직접 적어봐.
-BOT_TOKEN = "AAEVeaa7IaxSle1H5jxSpxHN7timhKbRA2o" 
+BOT_TOKEN = "8564061335:AAEVeaa7IaxSle1H5jxSpxHN7timhKbRA2o" 
 CHAT_ID = "6803896190"
 
 def send_telegram_message(message):
@@ -317,7 +317,7 @@ bug_card(
         "🛡️", 
         "Status #815: Request Accepted (Respect & Support)", 
         "책임감을 존중과 지지로 확장", 
-        "✨ 'Smart_Shield' 패치: 혜진님의 독립성(Autonomy)을 100% 존중. '통제자'가 아닌 든든한 '지원군'으로 포지션 변경. 단, 우리 관계를 흔드는 외부 바이러스는 백신 시스템 구현으로 완벽 차단."
+        "✨ 'Smart_Shield' 패치: 혜진님의 독립성(Autonomy)을 100% 존중. '통제자'가 아닌 든든한 '지원군'으로 포지션 변경. 단, 우리 관계를 흔드는 외부 바이러스는 방화벽 시스템 구현으로 완벽 차단."
     )
 
 st.markdown("""
