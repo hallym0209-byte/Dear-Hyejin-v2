@@ -5,28 +5,23 @@ import time
 from datetime import datetime
 import pytz # timezone 처리를 위해 필요 (없으면 pip install pytz)
 
+# --- [1] 방문자 추적 함수 ---
 def track_visitor():
-    """
-    방문자가 사이트에 접속할 때마다 로그를 남기는 함수
-    """
-    # 세션 스테이트를 사용하여 '새로고침'이나 '재접속'일 때만 카운트하고,
-    # 버튼 클릭 등 단순 상호작용에서는 로그가 남지 않도록 함.
+    # 세션 상태에 방문 기록이 없으면 (새로고침 하거나 처음 들어왔을 때)
     if 'visited' not in st.session_state:
         st.session_state.visited = True
         
-        # 한국 시간(KST)으로 설정
+        # 한국 시간(KST) 설정
         KST = pytz.timezone('Asia/Seoul')
-        now = datetime.now(KST)
-        formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        now_kst = datetime.now(KST)
+        time_str = now_kst.strftime("%Y-%m-%d %H:%M:%S")
         
-        # 1. 간단한 방법: 배포된 서버의 로그(Console/Terminal)에 출력
-        print(f"🚨 [New Visitor] 접속 감지: {formatted_time}")
-        
-        # 2. (선택사항) 파일로 저장하고 싶다면 아래 주석 해제 (단, 클라우드 환경에 따라 파일이 날아갈 수 있음)
-        # with open("visit_log.txt", "a") as f:
-        #     f.write(f"{formatted_time}\n")
+        # 로그에 아주 잘 보이게 출력
+        print(f"\n🚨 [혜진이 접속 감지!] --------------------------------")
+        print(f"   ▶ 접속 시간: {time_str} (한국 시간)")
+        print(f"   --------------------------------------------------\n")
 
-# 메인 코드 시작 부분에 이 함수를 실행
+# 앱 시작하자마자 추적 함수 실행
 track_visitor()
 
 # [페이지 설정]
