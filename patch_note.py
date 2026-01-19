@@ -4,6 +4,7 @@ import pandas as pd
 import time
 from datetime import datetime
 import pytz # timezone 처리를 위해 필요 (없으면 pip install pytz)
+import requests
 
 # --- [1] 방문자 추적 함수 ---
 def track_visitor():
@@ -23,6 +24,49 @@ def track_visitor():
 
 # 앱 시작하자마자 추적 함수 실행
 track_visitor()
+
+# --- [1] 텔레그램 설정 (아까 복사한 거 여기 붙여넣기) ---
+# 주의: 실제 배포할 때는 이 키들을 Streamlit Cloud의 'Secrets'에 넣는 게 보안상 좋지만, 
+# 일단은 작동 확인을 위해 여기 직접 적어봐.
+BOT_TOKEN = "AAEVeaa7IaxSle1H5jxSpxHN7timhKbRA2o" 
+CHAT_ID = "6803896190"
+
+def send_telegram_message(message):
+    """
+    텔레그램 봇 API를 통해 나에게 메시지를 보내는 함수
+    """
+    try:
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+        data = {'chat_id': CHAT_ID, 'text': message}
+        requests.post(url, data=data)
+    except Exception as e:
+        print(f"텔레그램 전송 실패: {e}")
+
+def track_and_notify():
+    """
+    방문자가 오면 로그도 찍고 + 텔레그램도 보내는 함수
+    """
+    # 'visited'가 없을 때 = 새로고침이나 첫 접속일 때만 실행
+    if 'visited' not in st.session_state:
+        st.session_state.visited = True
+        
+        # 1. 한국 시간 구하기
+        KST = pytz.timezone('Asia/Seoul')
+        now_str = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S")
+        
+        # 2. 보낼 메시지 만들기
+        alert_msg = f"🚨 [접속 알림] 혜진이(추정) 접속!\n시간: {now_str}\n(심장이 뛴다...!)"
+        
+        # 3. 로그 출력 (Streamlit 관리자 화면용)
+        print(alert_msg)
+        
+        # 4. 텔레그램 전송 (내 폰으로 알림 옴)
+        send_telegram_message(alert_msg)
+
+# --- [앱 시작] ---
+# 이 함수를 무조건 맨 처음에 실행해야 함
+track_and_notify()
+
 
 # [페이지 설정]
 st.set_page_config(
